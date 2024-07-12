@@ -1,3 +1,5 @@
+'use client';
+
 import {PrismaClient} from "@prisma/client";
 
 const prisma = new PrismaClient();
@@ -9,8 +11,6 @@ const cetak = async() => {
 };
 
 const result = await cetak().catch(error => console.error(error));
-
-console.log(result);
 
 const merchantID = process.env.MERCHANT_ID;
 const partnerMerchantID = process.env.PARTNER_MERCHANT_ID;
