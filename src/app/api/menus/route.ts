@@ -5,14 +5,12 @@ const prisma = new PrismaClient();
 const cetak = async() => {
     const data = await prisma.cetak.findMany();
 
-    // console.log(data);
-
     return data;
 };
 
-const result:Array = await cetak().catch(error => console.error(error));
+const result = await cetak().catch(error => console.error(error));
 
-console.log(result[0]['ITEMCODE']);
+console.log(result);
 
 const merchantID = process.env.MERCHANT_ID;
 const partnerMerchantID = process.env.PARTNER_MERCHANT_ID;
@@ -112,13 +110,13 @@ const response = {
                     "sellingTimeID": "SELL01",
                     "items": [
                         {
-                            "id": result[0]["ITEMCODE"],
-                            "name": result[0]["NAMAITEM"],
+                            "id": 'result[0]["ITEMCODE"]',
+                            "name": 'result[0]["NAMAITEM"]',
                             "nameTranslation": {},
                             "availableStatus": "AVAILABLE",
-                            "description": result[0]["NAMAITEM"],
+                            "description": 'result[0]["NAMAITEM"]',
                             "descriptionTranslation": {},
-                            "price": result[0]["HARGA"],
+                            "price": 'result[0]["HARGA"]',
                             "photos": [
                                 "image_url_1",
                                 "image_url_2"
