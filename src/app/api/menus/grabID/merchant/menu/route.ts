@@ -38,7 +38,7 @@ const response = {
                     ]
                 },
                 "tue": {
-                    "openPeriodType": "OpenPeriod1",
+                    "openPeriodType": "OpenPeriod",
                     "periods": [
                         {
                             "startTime": "08:00",
@@ -114,7 +114,7 @@ const response = {
                             "availableStatus": "AVAILABLE",
                             "description": 'result[0]["NAMAITEM"]',
                             "descriptionTranslation": {},
-                            "price": 'result[0]["HARGA"]',
+                            "price": 1000,
                             "photos": [
                                 "image_url_1",
                                 "image_url_2"
