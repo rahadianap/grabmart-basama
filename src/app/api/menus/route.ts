@@ -10,7 +10,9 @@ const cetak = async() => {
     return data;
 };
 
-const result = await cetak().catch(error => console.error(error));
+const result:Array = await cetak().catch(error => console.error(error));
+
+console.log(result[0]['ITEMCODE']);
 
 const merchantID = process.env.MERCHANT_ID;
 const partnerMerchantID = process.env.PARTNER_MERCHANT_ID;
