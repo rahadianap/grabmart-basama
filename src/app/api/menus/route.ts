@@ -1,10 +1,16 @@
-'use client';
-
 import {PrismaClient} from "@prisma/client";
 
 const prisma = new PrismaClient();
 
-const cetak = await prisma.cetak.findMany();
+const cetak = async() => {
+    const data = await prisma.cetak.findMany();
+
+    // console.log(data);
+
+    return data;
+};
+
+const result = await cetak().catch(error => console.error(error));
 
 const merchantID = process.env.MERCHANT_ID;
 const partnerMerchantID = process.env.PARTNER_MERCHANT_ID;
@@ -104,13 +110,13 @@ const response = {
                     "sellingTimeID": "SELL01",
                     "items": [
                         {
-                            "id": cetak[0]["ITEMCODE"],
-                            "name": cetak[0]["NAMAITEM"],
+                            "id": result[0]["ITEMCODE"],
+                            "name": result[0]["NAMAITEM"],
                             "nameTranslation": {},
                             "availableStatus": "AVAILABLE",
-                            "description": cetak[0]["NAMAITEM"],
+                            "description": result[0]["NAMAITEM"],
                             "descriptionTranslation": {},
-                            "price": cetak[0]["HARGA"],
+                            "price": result[0]["HARGA"],
                             "photos": [
                                 "image_url_1",
                                 "image_url_2"
@@ -140,7 +146,7 @@ const response = {
 };
 
 const GET = async () => {
-    return await Response.json(response);
+    return Response.json(response);
 }
 
 export {GET};
