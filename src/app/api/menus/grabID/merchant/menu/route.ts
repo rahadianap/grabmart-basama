@@ -14,19 +14,19 @@ const merchantID = process.env.MERCHANT_ID;
 const partnerMerchantID = process.env.PARTNER_MERCHANT_ID;
 
 const response = {
-    merchantID : merchantID,
-    partnerMerchantID : partnerMerchantID,
-    currency : {
-        code : "IDR",
-        symbol : "Rp",
-        exponent : 0
+    "merchantID" : merchantID,
+    "partnerMerchantID" : partnerMerchantID,
+    "currency" : {
+        "code" : "IDR",
+        "symbol" : "Rp",
+        "exponent" : 0
     },
-    sellingTimes : [
+    "sellingTimes" : [
         {
-            startTime : "2022-01-09 00:00:00",
-            endTime : "2025-01-09 00:00:00",
-            id : "SELL01",
-            name : "normal",
+            "startTime" : "2022-01-09 00:00:00",
+            "endTime" : "2025-01-09 00:00:00",
+            "id" : "SELL01",
+            "name" : "normal",
             "serviceHours": {
                 "mon": {
                     "openPeriodType": "OpenPeriod",
