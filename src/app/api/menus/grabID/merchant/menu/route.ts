@@ -108,13 +108,13 @@ const response = {
                     "sellingTimeID": "SELL01",
                     "items": [
                         {
-                            "id": 'result[0]["ITEMCODE"]',
-                            "name": 'result[0]["NAMAITEM"]',
+                            "id": "016000287914",
+                            "name": "BUGLES CARAMEL 6 OZ",
                             "nameTranslation": {},
                             "availableStatus": "AVAILABLE",
-                            "description": 'result[0]["NAMAITEM"]',
+                            "description": "BUGLES CARAMEL 6 OZ",
                             "descriptionTranslation": {},
-                            "price": 1000,
+                            "price": 114900,
                             "photos": [
                                 "image_url_1",
                                 "image_url_2"
