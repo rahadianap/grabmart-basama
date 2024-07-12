@@ -32,7 +32,7 @@ const response = {
                     ]
                 },
                 "tue": {
-                    "openPeriodType": "OpenPeriod",
+                    "openPeriodType": "OpenPeriod1",
                     "periods": [
                         {
                             "startTime": "08:00",
