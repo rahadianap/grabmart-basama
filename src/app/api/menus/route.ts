@@ -1,16 +1,14 @@
-'use client';
+// import {PrismaClient} from "@prisma/client";
 
-import {PrismaClient} from "@prisma/client";
+// const prisma = new PrismaClient();
 
-const prisma = new PrismaClient();
+// const cetak = async() => {
+//     const data = await prisma.cetak.findMany();
 
-const cetak = async() => {
-    const data = await prisma.cetak.findMany();
+//     return data;
+// };
 
-    return data;
-};
-
-const result = await cetak().catch(error => console.error(error));
+// const result = await cetak().catch(error => console.error(error));
 
 const merchantID = process.env.MERCHANT_ID;
 const partnerMerchantID = process.env.PARTNER_MERCHANT_ID;
