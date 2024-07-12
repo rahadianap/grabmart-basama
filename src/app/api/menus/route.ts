@@ -140,7 +140,7 @@ const response = {
 };
 
 const GET = async () => {
-    return Response.json(response);
+    return await Response.json(response);
 }
 
 export {GET};
